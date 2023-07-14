@@ -25,16 +25,16 @@ class ProxyProvider(
         if (type == "KeyStore" && host != "xiaomi.eu") {
 
             val origProduct = Build.PRODUCT
-            val patchedProduct = "marlin"
+            val patchedProduct = "walleye"
 
             val origDevice = Build.DEVICE
-            val patchedDevice = "marlin"
+            val patchedDevice = "walleye"
 
             val origModel = Build.MODEL
-            val patchedModel = "Pixel XL"
+            val patchedModel = "Pixel 2"
 
             val origFingerprint = Build.FINGERPRINT
-            val patchedFingerprint = "google/marlin/marlin:7.1.2/NJH47F/4146041:user/release-keys"
+            val patchedFingerprint = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
             logDebug("Patch PRODUCT for KeyStore $origProduct -> $patchedProduct")
             Build::class.java.getDeclaredField("PRODUCT").let { field ->
